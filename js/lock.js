@@ -20,7 +20,6 @@ $(function(){
 		var y = e.clientY;
 		$.each(point_arr, function(index){
 			if(Math.pow(x - $(this)[0].x, 2) + Math.pow(y - $(this)[0].y, 2) < cir_radiu * cir_radiu){
-//				console.log($(this)[0].x + " " + $(this)[0].y);
 				paintCircle(cxt);
 				paintFullCircle($(this)[0].x, $(this)[0].y, cxt);
 				return false;
