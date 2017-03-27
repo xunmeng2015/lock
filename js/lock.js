@@ -21,7 +21,6 @@ $(function(){
 		$.each(point_arr, function(index){
 			if(Math.pow(x - $(this)[0].x, 2) + Math.pow(y - $(this)[0].y, 2) < cir_radiu * cir_radiu){
 //				console.log($(this)[0].x + " " + $(this)[0].y);
-				cxt.clearRect(0, 0, body_width, cxt_height);
 				paintCircle(cxt);
 				paintFullCircle($(this)[0].x, $(this)[0].y, cxt);
 				return false;
@@ -59,6 +58,16 @@ function paintFullCircle(x, y, cxt){
 	cxt.strokeStyle="#ff9900";
 	cxt.fillStyle = "#ffcc00";
 	cxt.fill();
+	cxt.stroke();
+	cxt.closePath();
+}
+
+function quitFull(x, y, cxt){
+	cxt.beginPath();
+	cxt.lineWidth = 4;
+//	cxt.arc(offset_x + space_x * x + cir_radiu * (2 * x + 1), offset_y + space_y * y + cir_radiu * (2 * y + 1), cir_radiu, 0, Math.PI*2,false);
+	cxt.arc(x, y, cir_radiu, 0, Math.PI*2,false);
+	cxt.strokeStyle="#ff9900";
 	cxt.stroke();
 	cxt.closePath();
 }
