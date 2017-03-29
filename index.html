@@ -5,18 +5,29 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 		<title>html5模拟手机锁屏</title>
 		<style type="text/css">
-			body, canvas{
+			body, canvas, div, input, label, p{
 				margin: 0;
 				padding: 0;
 				background-color: #d9d9d9;
+				font-size: 16px;
+			}
+			label{
+				margin-left: 10px;
+			}
+			.choose, .tit{
+				text-align: center;
+			}
+			.tit{
+				margin-bottom: 20px;
 			}
 		</style>
 	</head>
 	<body>
 		<canvas id="canvas" class="canvas" width="300" height="500" style="background: rgba(217,217,217,0.5);"></canvas>
-		<p class="tit"></p>
+		<p class="tit">请输入手势密码</p>
 		<div class="choose">
-			<input type="radio" class="set" id="set" name="set" /><span for="set">设置密码</span>
+			<input type="radio" class="set" id="set" name="choice" checked="true" /><label for="set">设置密码</label><br /><br />
+			<input type="radio" class="check" id="check" name="choice" /><label for="check">验证密码</label>
 		</div>
 		<script type="text/javascript" src="js/jquery-3.1.0.min.js" ></script>
 		<script type="text/javascript" src="js/lock.js" ></script>
