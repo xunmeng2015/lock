@@ -59,7 +59,7 @@
                 cxt.lineWidth = 10;  
                 cxt.strokeStyle = "#627eed";  
                 cxt.stroke();  
-                cxt.closePath();  
+                cxt.closePath();
                 if(touchPoint!=null){  
                     var lastPointIndex=pwdArr[pwdArr.length-1];  
                     var lastPoint=circleArr[lastPointIndex];  
@@ -112,7 +112,7 @@
         /**  
          * 给画布绑定事件  
          */  
-        function bindEvent(canvas, cxt) {  
+        function bindEvent(canvas, cxt) {
             var pwdArr = [];  
             canvas.addEventListener("touchstart", function (e) {  
                 getSelectPwd(e.touches[0],pwdArr);  
