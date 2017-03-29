@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 		<title>html5模拟手机锁屏</title>
 		<style type="text/css">
 			body, canvas{
@@ -13,6 +14,10 @@
 	</head>
 	<body>
 		<canvas id="canvas" class="canvas" width="300" height="500" style="background: rgba(217,217,217,0.5);"></canvas>
+		<p class="tit"></p>
+		<div class="choose">
+			<input type="radio" class="set" id="set" name="set" /><span for="set">设置密码</span>
+		</div>
 		<script type="text/javascript" src="js/jquery-3.1.0.min.js" ></script>
 		<script type="text/javascript" src="js/lock.js" ></script>
 	</body>

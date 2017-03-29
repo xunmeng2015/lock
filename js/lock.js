@@ -1,7 +1,7 @@
-var cir_radiu = 35;	//半径
-var cxt_height = 800;	//画布高度
-var offset_x = 150;	//X方向偏移
-var offset_y = 140;	//Y方向偏移
+var cir_radiu = 25;	//半径
+var cxt_height = 400;	//画布高度
+var offset_x = 30;	//X方向偏移
+var offset_y = 60;	//Y方向偏移
 var body_width = document.body.clientWidth;//获取窗口宽度
 var space_x = (body_width - offset_x * 2 - cir_radiu * 2 * 3) / 2;		//三个圆之间的X方向间隙
 var space_y = (cxt_height - offset_y * 2 - cir_radiu * 2 * 3) / 2;		//三个圆之间的Y方向间隙
@@ -33,8 +33,8 @@ $(function(){
 		});
 		start_x = 0;
 		start_y = 0;
-		console.log(pass);
-		alert(pass);
+//		console.log(pass);
+//		alert(pass);
 		pass = [];
 		pass_point = [];
 	});
